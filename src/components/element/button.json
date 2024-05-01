@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_element_buttons",
+  "info": {
+    "displayName": "Button",
+    "icon": "database"
+  },
+  "options": {},
+  "attributes": {
+    "buttonName": {
+      "type": "string"
+    },
+    "buttonUrl": {
+      "type": "string"
+    }
+  }
+}

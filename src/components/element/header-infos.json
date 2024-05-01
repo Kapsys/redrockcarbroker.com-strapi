@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_element_header_infos",
+  "info": {
+    "displayName": "Header Infos",
+    "icon": "eye"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "addressInfos": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_element_menu_items",
+  "info": {
+    "displayName": "Menu Items",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "itemName": {
+      "type": "string"
+    },
+    "itemLink": {
+      "type": "string"
+    }
+  }
+}
