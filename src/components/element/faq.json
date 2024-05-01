@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_element_faqs",
+  "info": {
+    "displayName": "Faq",
+    "icon": "manyToOne"
+  },
+  "options": {},
+  "attributes": {
+    "faqQuestion": {
+      "type": "text"
+    },
+    "faqAnswer": {
+      "type": "text"
+    }
+  }
+}

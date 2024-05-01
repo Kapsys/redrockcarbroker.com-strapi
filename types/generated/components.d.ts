@@ -38,6 +38,18 @@ export interface ElementCallToAction extends Schema.Component {
   };
 }
 
+export interface ElementFaq extends Schema.Component {
+  collectionName: 'components_element_faqs';
+  info: {
+    displayName: 'Faq';
+    icon: 'manyToOne';
+  };
+  attributes: {
+    faqQuestion: Attribute.Text;
+    faqAnswer: Attribute.Text;
+  };
+}
+
 export interface ElementHeaderInfos extends Schema.Component {
   collectionName: 'components_element_header_infos';
   info: {
@@ -84,6 +96,18 @@ export interface ElementTextBlock extends Schema.Component {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
+  };
+}
+
+export interface SectionFaqSection extends Schema.Component {
+  collectionName: 'components_section_faq_sections';
+  info: {
+    displayName: 'FAQ Section';
+    icon: 'layer';
+  };
+  attributes: {
+    textBlock: Attribute.Component<'element.text-block'>;
+    faq: Attribute.Component<'element.faq', true>;
   };
 }
 
@@ -198,10 +222,12 @@ declare module '@strapi/types' {
       'element.advantages-section': ElementAdvantagesSection;
       'element.button': ElementButton;
       'element.call-to-action': ElementCallToAction;
+      'element.faq': ElementFaq;
       'element.header-infos': ElementHeaderInfos;
       'element.menu-items': ElementMenuItems;
       'element.socials': ElementSocials;
       'element.text-block': ElementTextBlock;
+      'section.faq-section': SectionFaqSection;
       'section.footer': SectionFooter;
       'section.header': SectionHeader;
       'section.hero-section': SectionHeroSection;

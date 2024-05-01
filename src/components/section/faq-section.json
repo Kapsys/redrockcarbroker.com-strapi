@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_section_faq_sections",
+  "info": {
+    "displayName": "FAQ Section",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "textBlock": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.text-block"
+    },
+    "faq": {
+      "displayName": "Faq",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.faq"
+    }
+  }
+}
