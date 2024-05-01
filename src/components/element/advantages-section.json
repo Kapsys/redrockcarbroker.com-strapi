@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_element_advantages_sections",
+  "info": {
+    "displayName": "Advantages Section",
+    "icon": "command",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

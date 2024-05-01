@@ -1,5 +1,18 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ElementAdvantagesSection extends Schema.Component {
+  collectionName: 'components_element_advantages_sections';
+  info: {
+    displayName: 'Advantages Section';
+    icon: 'command';
+    description: '';
+  };
+  attributes: {
+    icon: Attribute.Media;
+    description: Attribute.Text;
+  };
+}
+
 export interface ElementButton extends Schema.Component {
   collectionName: 'components_element_buttons';
   info: {
@@ -62,6 +75,18 @@ export interface ElementSocials extends Schema.Component {
   };
 }
 
+export interface ElementTextBlock extends Schema.Component {
+  collectionName: 'components_element_text_blocks';
+  info: {
+    displayName: 'Text Block';
+    icon: 'search';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 export interface SectionFooter extends Schema.Component {
   collectionName: 'components_section_footers';
   info: {
@@ -101,6 +126,19 @@ export interface SectionHeroSection extends Schema.Component {
     description: Attribute.Text;
     backgroundImage: Attribute.Media;
     callToAction: Attribute.Component<'element.call-to-action'>;
+  };
+}
+
+export interface SectionStatisticsSection extends Schema.Component {
+  collectionName: 'components_section_statistics_sections';
+  info: {
+    displayName: 'Statistics Section';
+    icon: 'feather';
+    description: '';
+  };
+  attributes: {
+    textBlock: Attribute.Component<'element.text-block'>;
+    advantagesSection: Attribute.Component<'element.advantages-section', true>;
   };
 }
 
@@ -157,14 +195,17 @@ export interface SharedSeo extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'element.advantages-section': ElementAdvantagesSection;
       'element.button': ElementButton;
       'element.call-to-action': ElementCallToAction;
       'element.header-infos': ElementHeaderInfos;
       'element.menu-items': ElementMenuItems;
       'element.socials': ElementSocials;
+      'element.text-block': ElementTextBlock;
       'section.footer': SectionFooter;
       'section.header': SectionHeader;
       'section.hero-section': SectionHeroSection;
+      'section.statistics-section': SectionStatisticsSection;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }

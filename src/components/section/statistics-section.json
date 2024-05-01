@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_section_statistics_sections",
+  "info": {
+    "displayName": "Statistics Section",
+    "icon": "feather",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "textBlock": {
+      "displayName": "Text Block",
+      "type": "component",
+      "repeatable": false,
+      "component": "element.text-block"
+    },
+    "advantagesSection": {
+      "displayName": "Advantages Section",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.advantages-section"
+    }
+  }
+}

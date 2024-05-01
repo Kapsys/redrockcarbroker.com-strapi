@@ -21,7 +21,8 @@
     "dynamicSetions": {
       "type": "dynamiczone",
       "components": [
-        "section.hero-section"
+        "section.hero-section",
+        "section.statistics-section"
       ]
     }
   }
