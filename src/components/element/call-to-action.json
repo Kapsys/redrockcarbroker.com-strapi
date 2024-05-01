@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_element_call_to_actions",
+  "info": {
+    "displayName": "Call To Action",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "nameLink": {
+      "type": "string"
+    }
+  }
+}

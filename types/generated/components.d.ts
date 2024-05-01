@@ -12,6 +12,19 @@ export interface ElementButton extends Schema.Component {
   };
 }
 
+export interface ElementCallToAction extends Schema.Component {
+  collectionName: 'components_element_call_to_actions';
+  info: {
+    displayName: 'Call To Action';
+    icon: 'pinMap';
+  };
+  attributes: {
+    icon: Attribute.Media;
+    name: Attribute.String;
+    nameLink: Attribute.String;
+  };
+}
+
 export interface ElementHeaderInfos extends Schema.Component {
   collectionName: 'components_element_header_infos';
   info: {
@@ -77,6 +90,20 @@ export interface SectionHeader extends Schema.Component {
   };
 }
 
+export interface SectionHeroSection extends Schema.Component {
+  collectionName: 'components_section_hero_sections';
+  info: {
+    displayName: 'Hero section';
+    icon: 'dashboard';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    backgroundImage: Attribute.Media;
+    callToAction: Attribute.Component<'element.call-to-action'>;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -131,11 +158,13 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'element.button': ElementButton;
+      'element.call-to-action': ElementCallToAction;
       'element.header-infos': ElementHeaderInfos;
       'element.menu-items': ElementMenuItems;
       'element.socials': ElementSocials;
       'section.footer': SectionFooter;
       'section.header': SectionHeader;
+      'section.hero-section': SectionHeroSection;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }
