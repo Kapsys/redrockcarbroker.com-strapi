@@ -989,7 +989,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'section.statistics-section',
         'section.faq-section',
         'section.contact-section',
-        'element.text-block'
+        'element.text-block',
+        'element.testimonials'
       ]
     >;
     createdAt: Attribute.DateTime;

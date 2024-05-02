@@ -100,6 +100,20 @@ export interface ElementSocials extends Schema.Component {
   };
 }
 
+export interface ElementTestimonials extends Schema.Component {
+  collectionName: 'components_element_testimonials';
+  info: {
+    displayName: 'Testimonials';
+    icon: 'emotionHappy';
+    description: '';
+  };
+  attributes: {
+    photo: Attribute.Media;
+    description: Attribute.Text;
+    fullName: Attribute.String;
+  };
+}
+
 export interface ElementTextBlock extends Schema.Component {
   collectionName: 'components_element_text_blocks';
   info: {
@@ -199,6 +213,21 @@ export interface SectionStatisticsSection extends Schema.Component {
   };
 }
 
+export interface SectionTestimonialsSection extends Schema.Component {
+  collectionName: 'components_section_testimonials_sections';
+  info: {
+    displayName: 'Testimonial Section';
+    icon: 'collapse';
+    description: '';
+  };
+  attributes: {
+    backgroundImage: Attribute.Media;
+    title: Attribute.String;
+    description: Attribute.Text;
+    testimonials: Attribute.Component<'element.testimonials', true>;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -260,6 +289,7 @@ declare module '@strapi/types' {
       'element.header-infos': ElementHeaderInfos;
       'element.menu-items': ElementMenuItems;
       'element.socials': ElementSocials;
+      'element.testimonials': ElementTestimonials;
       'element.text-block': ElementTextBlock;
       'section.contact-section': SectionContactSection;
       'section.faq-section': SectionFaqSection;
@@ -267,6 +297,7 @@ declare module '@strapi/types' {
       'section.header': SectionHeader;
       'section.hero-section': SectionHeroSection;
       'section.statistics-section': SectionStatisticsSection;
+      'section.testimonials-section': SectionTestimonialsSection;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }

@@ -25,7 +25,8 @@
         "section.statistics-section",
         "section.faq-section",
         "section.contact-section",
-        "element.text-block"
+        "element.text-block",
+        "element.testimonials"
       ]
     }
   }
