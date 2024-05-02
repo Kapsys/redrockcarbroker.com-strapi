@@ -38,6 +38,33 @@ export interface ElementCallToAction extends Schema.Component {
   };
 }
 
+export interface ElementCarParameters extends Schema.Component {
+  collectionName: 'components_element_car_parameters';
+  info: {
+    displayName: 'Car Parameters';
+    icon: 'bulletList';
+  };
+  attributes: {
+    parameter: Attribute.String;
+  };
+}
+
+export interface ElementCards extends Schema.Component {
+  collectionName: 'components_element_cards';
+  info: {
+    displayName: 'Cards';
+    icon: 'database';
+    description: '';
+  };
+  attributes: {
+    featuredImage: Attribute.Media;
+    title: Attribute.String;
+    carParameters: Attribute.Component<'element.car-parameters', true>;
+    price: Attribute.String;
+    button: Attribute.Component<'element.button', true>;
+  };
+}
+
 export interface ElementContactItems extends Schema.Component {
   collectionName: 'components_element_contact_items';
   info: {
@@ -200,6 +227,19 @@ export interface SectionHeroSection extends Schema.Component {
   };
 }
 
+export interface SectionProductSection extends Schema.Component {
+  collectionName: 'components_section_product_sections';
+  info: {
+    displayName: 'Product Section';
+    icon: 'layer';
+  };
+  attributes: {
+    textBlock: Attribute.Component<'element.text-block'>;
+    cards: Attribute.Component<'element.cards', true>;
+    button: Attribute.Component<'element.button', true>;
+  };
+}
+
 export interface SectionStatisticsSection extends Schema.Component {
   collectionName: 'components_section_statistics_sections';
   info: {
@@ -284,6 +324,8 @@ declare module '@strapi/types' {
       'element.advantages-section': ElementAdvantagesSection;
       'element.button': ElementButton;
       'element.call-to-action': ElementCallToAction;
+      'element.car-parameters': ElementCarParameters;
+      'element.cards': ElementCards;
       'element.contact-items': ElementContactItems;
       'element.faq': ElementFaq;
       'element.header-infos': ElementHeaderInfos;
@@ -296,6 +338,7 @@ declare module '@strapi/types' {
       'section.footer': SectionFooter;
       'section.header': SectionHeader;
       'section.hero-section': SectionHeroSection;
+      'section.product-section': SectionProductSection;
       'section.statistics-section': SectionStatisticsSection;
       'section.testimonials-section': SectionTestimonialsSection;
       'shared.meta-social': SharedMetaSocial;

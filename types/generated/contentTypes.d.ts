@@ -989,8 +989,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'section.statistics-section',
         'section.faq-section',
         'section.contact-section',
-        'element.text-block',
-        'element.testimonials'
+        'section.product-section',
+        'section.testimonials-section'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1008,6 +1008,7 @@ export interface ApiPostPost extends Schema.CollectionType {
     singularName: 'post';
     pluralName: 'posts';
     displayName: 'Post';
+    description: '';
   };
   options: {
     draftAndPublish: true;

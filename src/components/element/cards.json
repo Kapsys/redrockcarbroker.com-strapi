@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_element_cards",
+  "info": {
+    "displayName": "Cards",
+    "icon": "database",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "carParameters": {
+      "displayName": "Car Parameters",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.car-parameters"
+    },
+    "price": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.button"
+    }
+  }
+}

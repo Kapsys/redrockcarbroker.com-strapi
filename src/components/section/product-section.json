@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_section_product_sections",
+  "info": {
+    "displayName": "Product Section",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "textBlock": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.text-block"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.cards"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.button"
+    }
+  }
+}

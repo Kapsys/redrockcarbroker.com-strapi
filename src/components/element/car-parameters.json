@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_element_car_parameters",
+  "info": {
+    "displayName": "Car Parameters",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "parameter": {
+      "type": "string"
+    }
+  }
+}
