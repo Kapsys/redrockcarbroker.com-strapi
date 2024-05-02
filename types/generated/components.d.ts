@@ -38,6 +38,19 @@ export interface ElementCallToAction extends Schema.Component {
   };
 }
 
+export interface ElementContactItems extends Schema.Component {
+  collectionName: 'components_element_contact_items';
+  info: {
+    displayName: 'Contact Items';
+    icon: 'gate';
+  };
+  attributes: {
+    icon: Attribute.Media;
+    ItemTitle: Attribute.String;
+    itemContent: Attribute.Text;
+  };
+}
+
 export interface ElementFaq extends Schema.Component {
   collectionName: 'components_element_faqs';
   info: {
@@ -96,6 +109,26 @@ export interface ElementTextBlock extends Schema.Component {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
+  };
+}
+
+export interface SectionContactSection extends Schema.Component {
+  collectionName: 'components_section_contact_sections';
+  info: {
+    displayName: ' Contact Section';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    textBlock: Attribute.Component<'element.text-block'>;
+    contactItems: Attribute.Component<'element.contact-items', true>;
+    oembedMap: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbarBalloon';
+        }
+      >;
   };
 }
 
@@ -222,11 +255,13 @@ declare module '@strapi/types' {
       'element.advantages-section': ElementAdvantagesSection;
       'element.button': ElementButton;
       'element.call-to-action': ElementCallToAction;
+      'element.contact-items': ElementContactItems;
       'element.faq': ElementFaq;
       'element.header-infos': ElementHeaderInfos;
       'element.menu-items': ElementMenuItems;
       'element.socials': ElementSocials;
       'element.text-block': ElementTextBlock;
+      'section.contact-section': SectionContactSection;
       'section.faq-section': SectionFaqSection;
       'section.footer': SectionFooter;
       'section.header': SectionHeader;

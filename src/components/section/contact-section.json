@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_section_contact_sections",
+  "info": {
+    "displayName": " Contact Section",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "textBlock": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.text-block"
+    },
+    "contactItems": {
+      "displayName": "Contact Items",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.contact-items"
+    },
+    "oembedMap": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbarBalloon"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

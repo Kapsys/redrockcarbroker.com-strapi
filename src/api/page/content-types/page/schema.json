@@ -23,7 +23,9 @@
       "components": [
         "section.hero-section",
         "section.statistics-section",
-        "section.faq-section"
+        "section.faq-section",
+        "section.contact-section",
+        "element.text-block"
       ]
     }
   }

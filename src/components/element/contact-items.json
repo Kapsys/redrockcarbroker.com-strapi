@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_element_contact_items",
+  "info": {
+    "displayName": "Contact Items",
+    "icon": "gate"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "ItemTitle": {
+      "type": "string"
+    },
+    "itemContent": {
+      "type": "text"
+    }
+  }
+}
