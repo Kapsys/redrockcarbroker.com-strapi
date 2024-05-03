@@ -90,6 +90,18 @@ export interface ElementFaq extends Schema.Component {
   };
 }
 
+export interface ElementFooterMenuItems extends Schema.Component {
+  collectionName: 'components_element_footer_menu_items';
+  info: {
+    displayName: 'Footer Menu Items';
+    icon: 'twitter';
+  };
+  attributes: {
+    nameItem: Attribute.String;
+    linkItem: Attribute.String;
+  };
+}
+
 export interface ElementHeaderInfos extends Schema.Component {
   collectionName: 'components_element_header_infos';
   info: {
@@ -195,6 +207,10 @@ export interface SectionFooter extends Schema.Component {
   attributes: {
     footerLogo: Attribute.Media;
     socials: Attribute.Component<'element.socials', true>;
+    menuItems: Attribute.Component<'element.menu-items', true>;
+    footerMenuItems: Attribute.Component<'element.footer-menu-items', true>;
+    logoText: Attribute.String;
+    kapsysLogo: Attribute.Media;
   };
 }
 
@@ -328,6 +344,7 @@ declare module '@strapi/types' {
       'element.cards': ElementCards;
       'element.contact-items': ElementContactItems;
       'element.faq': ElementFaq;
+      'element.footer-menu-items': ElementFooterMenuItems;
       'element.header-infos': ElementHeaderInfos;
       'element.menu-items': ElementMenuItems;
       'element.socials': ElementSocials;

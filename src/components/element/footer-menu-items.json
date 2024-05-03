@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_element_footer_menu_items",
+  "info": {
+    "displayName": "Footer Menu Items",
+    "icon": "twitter"
+  },
+  "options": {},
+  "attributes": {
+    "nameItem": {
+      "type": "string"
+    },
+    "linkItem": {
+      "type": "string"
+    }
+  }
+}

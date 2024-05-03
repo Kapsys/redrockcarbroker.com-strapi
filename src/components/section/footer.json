@@ -8,6 +8,37 @@
   "options": {},
   "attributes": {
     "footerLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "socials": {
+      "displayName": "Socials",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.socials"
+    },
+    "menuItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.menu-items"
+    },
+    "footerMenuItems": {
+      "displayName": "Footer Menu Items",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.footer-menu-items"
+    },
+    "logoText": {
+      "type": "string"
+    },
+    "kapsysLogo": {
       "allowedTypes": [
         "images",
         "files",
@@ -16,12 +47,6 @@
       ],
       "type": "media",
       "multiple": false
-    },
-    "socials": {
-      "displayName": "Socials",
-      "type": "component",
-      "repeatable": true,
-      "component": "element.socials"
     }
   }
 }
