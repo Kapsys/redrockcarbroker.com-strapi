@@ -1025,6 +1025,7 @@ export interface ApiPostPost extends Schema.CollectionType {
     faqSection: Attribute.Component<'section.faq-section'>;
     contactSection: Attribute.Component<'section.contact-section'>;
     seo: Attribute.Component<'shared.seo'>;
+    carInfos: Attribute.Component<'element.product-infos', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
