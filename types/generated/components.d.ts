@@ -290,6 +290,7 @@ export interface SectionFooter extends Schema.Component {
     logoText: Attribute.String;
     kapsysLogo: Attribute.Media;
     kapsysLogoLink: Attribute.String;
+    button: Attribute.Component<'element.button'>;
   };
 }
 
