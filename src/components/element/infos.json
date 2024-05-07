@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_element_infos",
+  "info": {
+    "displayName": "Infos",
+    "icon": "oneToOne",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "info": {
+      "type": "string"
+    }
+  }
+}

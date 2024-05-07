@@ -993,6 +993,7 @@ export interface ApiPagePage extends Schema.CollectionType {
         'section.testimonials-section'
       ]
     >;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1016,6 +1017,14 @@ export interface ApiPostPost extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     slug: Attribute.String;
+    price: Attribute.String;
+    carGallery: Attribute.Component<'element.post-gallery', true>;
+    carSpecifications: Attribute.Component<'element.car-specifications', true>;
+    callToAction: Attribute.Component<'element.call-to-action', true>;
+    carDescription: Attribute.Component<'element.product-description'>;
+    faqSection: Attribute.Component<'section.faq-section'>;
+    contactSection: Attribute.Component<'section.contact-section'>;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

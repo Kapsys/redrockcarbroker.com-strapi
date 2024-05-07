@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_element_product_infos",
+  "info": {
+    "displayName": "Car Infos",
+    "icon": "manyToMany",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "infos": {
+      "displayName": "Infos",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.infos"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.button"
+    }
+  }
+}

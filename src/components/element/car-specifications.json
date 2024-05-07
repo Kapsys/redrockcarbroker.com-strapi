@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_element_car_specifications",
+  "info": {
+    "displayName": "Car Specifications",
+    "icon": "chartCircle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "specifications": {
+      "displayName": "Specifications",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.specifications"
+    }
+  }
+}

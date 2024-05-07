@@ -17,6 +17,44 @@
     },
     "slug": {
       "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "carGallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.post-gallery"
+    },
+    "carSpecifications": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.car-specifications"
+    },
+    "callToAction": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.call-to-action"
+    },
+    "carDescription": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.product-description"
+    },
+    "faqSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.faq-section"
+    },
+    "contactSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.contact-section"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

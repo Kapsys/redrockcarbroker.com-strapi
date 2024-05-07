@@ -2,7 +2,8 @@
   "collectionName": "components_section_product_sections",
   "info": {
     "displayName": "Product Section",
-    "icon": "layer"
+    "icon": "layer",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,11 +11,6 @@
       "type": "component",
       "repeatable": false,
       "component": "element.text-block"
-    },
-    "cards": {
-      "type": "component",
-      "repeatable": true,
-      "component": "element.cards"
     },
     "button": {
       "type": "component",

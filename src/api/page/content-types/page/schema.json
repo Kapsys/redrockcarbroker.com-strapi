@@ -28,6 +28,11 @@
         "section.product-section",
         "section.testimonials-section"
       ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

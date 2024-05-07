@@ -49,6 +49,19 @@ export interface ElementCarParameters extends Schema.Component {
   };
 }
 
+export interface ElementCarSpecifications extends Schema.Component {
+  collectionName: 'components_element_car_specifications';
+  info: {
+    displayName: 'Car Specifications';
+    icon: 'chartCircle';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    specifications: Attribute.Component<'element.specifications', true>;
+  };
+}
+
 export interface ElementCards extends Schema.Component {
   collectionName: 'components_element_cards';
   info: {
@@ -114,6 +127,18 @@ export interface ElementHeaderInfos extends Schema.Component {
   };
 }
 
+export interface ElementInfos extends Schema.Component {
+  collectionName: 'components_element_infos';
+  info: {
+    displayName: 'Infos';
+    icon: 'oneToOne';
+    description: '';
+  };
+  attributes: {
+    info: Attribute.String;
+  };
+}
+
 export interface ElementMenuItems extends Schema.Component {
   collectionName: 'components_element_menu_items';
   info: {
@@ -127,6 +152,45 @@ export interface ElementMenuItems extends Schema.Component {
   };
 }
 
+export interface ElementPostGallery extends Schema.Component {
+  collectionName: 'components_element_post_galleries';
+  info: {
+    displayName: 'Car Gallery';
+    icon: 'stack';
+    description: '';
+  };
+  attributes: {
+    postimage: Attribute.Media;
+  };
+}
+
+export interface ElementProductDescription extends Schema.Component {
+  collectionName: 'components_element_product_descriptions';
+  info: {
+    displayName: 'Car Description';
+    icon: 'expand';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    content: Attribute.Text;
+  };
+}
+
+export interface ElementProductInfos extends Schema.Component {
+  collectionName: 'components_element_product_infos';
+  info: {
+    displayName: 'Car Infos';
+    icon: 'manyToMany';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    infos: Attribute.Component<'element.infos', true>;
+    button: Attribute.Component<'element.button'>;
+  };
+}
+
 export interface ElementSocials extends Schema.Component {
   collectionName: 'components_element_socials';
   info: {
@@ -136,6 +200,20 @@ export interface ElementSocials extends Schema.Component {
   attributes: {
     socialIcon: Attribute.Media;
     socialUrl: Attribute.String;
+  };
+}
+
+export interface ElementSpecifications extends Schema.Component {
+  collectionName: 'components_element_specifications';
+  info: {
+    displayName: 'Specifications';
+    icon: 'stack';
+    description: '';
+  };
+  attributes: {
+    icon: Attribute.Media;
+    parameter: Attribute.String;
+    value: Attribute.String;
   };
 }
 
@@ -248,10 +326,10 @@ export interface SectionProductSection extends Schema.Component {
   info: {
     displayName: 'Product Section';
     icon: 'layer';
+    description: '';
   };
   attributes: {
     textBlock: Attribute.Component<'element.text-block'>;
-    cards: Attribute.Component<'element.cards', true>;
     button: Attribute.Component<'element.button', true>;
   };
 }
@@ -341,13 +419,19 @@ declare module '@strapi/types' {
       'element.button': ElementButton;
       'element.call-to-action': ElementCallToAction;
       'element.car-parameters': ElementCarParameters;
+      'element.car-specifications': ElementCarSpecifications;
       'element.cards': ElementCards;
       'element.contact-items': ElementContactItems;
       'element.faq': ElementFaq;
       'element.footer-menu-items': ElementFooterMenuItems;
       'element.header-infos': ElementHeaderInfos;
+      'element.infos': ElementInfos;
       'element.menu-items': ElementMenuItems;
+      'element.post-gallery': ElementPostGallery;
+      'element.product-description': ElementProductDescription;
+      'element.product-infos': ElementProductInfos;
       'element.socials': ElementSocials;
+      'element.specifications': ElementSpecifications;
       'element.testimonials': ElementTestimonials;
       'element.text-block': ElementTextBlock;
       'section.contact-section': SectionContactSection;

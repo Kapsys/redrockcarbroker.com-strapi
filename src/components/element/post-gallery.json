@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_element_post_galleries",
+  "info": {
+    "displayName": "Car Gallery",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "postimage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

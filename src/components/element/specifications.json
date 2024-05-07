@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_element_specifications",
+  "info": {
+    "displayName": "Specifications",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "parameter": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

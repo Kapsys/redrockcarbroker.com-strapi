@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_element_product_descriptions",
+  "info": {
+    "displayName": "Car Description",
+    "icon": "expand",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}
