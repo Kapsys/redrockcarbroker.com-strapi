@@ -289,6 +289,7 @@ export interface SectionFooter extends Schema.Component {
     footerMenuItems: Attribute.Component<'element.footer-menu-items', true>;
     logoText: Attribute.String;
     kapsysLogo: Attribute.Media;
+    kapsysLogoLink: Attribute.String;
   };
 }
 
