@@ -316,12 +316,13 @@ export interface SectionHeroSection extends Schema.Component {
   info: {
     displayName: 'Hero section';
     icon: 'dashboard';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     backgroundImage: Attribute.Media;
-    callToAction: Attribute.Component<'element.call-to-action'>;
+    button: Attribute.Component<'element.button', true>;
   };
 }
 
