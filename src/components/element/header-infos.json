@@ -2,22 +2,27 @@
   "collectionName": "components_element_header_infos",
   "info": {
     "displayName": "Header Infos",
-    "icon": "eye"
+    "icon": "eye",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "addressInfos": {
       "type": "string"
+    },
+    "link": {
+      "type": "text"
     }
   }
 }

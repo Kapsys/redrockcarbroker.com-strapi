@@ -120,10 +120,12 @@ export interface ElementHeaderInfos extends Schema.Component {
   info: {
     displayName: 'Header Infos';
     icon: 'eye';
+    description: '';
   };
   attributes: {
     icon: Attribute.Media;
     addressInfos: Attribute.String;
+    link: Attribute.Text;
   };
 }
 
