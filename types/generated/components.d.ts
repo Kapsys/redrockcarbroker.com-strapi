@@ -343,12 +343,13 @@ export interface SectionPromoSection extends Schema.Component {
   info: {
     displayName: 'Promo Section';
     icon: 'monitor';
+    description: '';
   };
   attributes: {
     backgroundImage: Attribute.Media;
     title: Attribute.String;
     description: Attribute.Text;
-    button: Attribute.Component<'element.button'>;
+    button: Attribute.Component<'element.button', true>;
   };
 }
 
