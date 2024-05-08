@@ -41,16 +41,6 @@
       "repeatable": false,
       "component": "element.product-description"
     },
-    "faqSection": {
-      "type": "component",
-      "repeatable": false,
-      "component": "section.faq-section"
-    },
-    "contactSection": {
-      "type": "component",
-      "repeatable": false,
-      "component": "section.contact-section"
-    },
     "seo": {
       "type": "component",
       "repeatable": false,

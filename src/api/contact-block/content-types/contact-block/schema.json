@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_blocks",
+  "info": {
+    "singularName": "contact-block",
+    "pluralName": "contact-blocks",
+    "displayName": "Contact Block"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contactSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.contact-section"
+    }
+  }
+}

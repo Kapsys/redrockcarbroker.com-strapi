@@ -916,6 +916,52 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiContactBlockContactBlock extends Schema.SingleType {
+  collectionName: 'contact_blocks';
+  info: {
+    singularName: 'contact-block';
+    pluralName: 'contact-blocks';
+    displayName: 'Contact Block';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contactSection: Attribute.Component<'section.contact-section'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::contact-block.contact-block', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::contact-block.contact-block', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    sitemap_exclude: Attribute.Boolean & Attribute.Private & Attribute.DefaultTo<false>;
+  };
+}
+
+export interface ApiFaqBlockFaqBlock extends Schema.SingleType {
+  collectionName: 'faq_blocks';
+  info: {
+    singularName: 'faq-block';
+    pluralName: 'faq-blocks';
+    displayName: 'Faq Block';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    faqSection: Attribute.Component<'section.faq-section'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::faq-block.faq-block', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::faq-block.faq-block', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    sitemap_exclude: Attribute.Boolean & Attribute.Private & Attribute.DefaultTo<false>;
+  };
+}
+
 export interface ApiFormForm extends Schema.CollectionType {
   collectionName: 'forms';
   info: {
@@ -1022,8 +1068,6 @@ export interface ApiPostPost extends Schema.CollectionType {
     carSpecifications: Attribute.Component<'element.car-specifications', true>;
     callToAction: Attribute.Component<'element.call-to-action', true>;
     carDescription: Attribute.Component<'element.product-description'>;
-    faqSection: Attribute.Component<'section.faq-section'>;
-    contactSection: Attribute.Component<'section.contact-section'>;
     seo: Attribute.Component<'shared.seo'>;
     carInfos: Attribute.Component<'element.product-infos', true>;
     createdAt: Attribute.DateTime;
@@ -1059,6 +1103,8 @@ declare module '@strapi/types' {
       'plugin::sitemap.sitemap': PluginSitemapSitemap;
       'plugin::sitemap.sitemap-cache': PluginSitemapSitemapCache;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::contact-block.contact-block': ApiContactBlockContactBlock;
+      'api::faq-block.faq-block': ApiFaqBlockFaqBlock;
       'api::form.form': ApiFormForm;
       'api::global.global': ApiGlobalGlobal;
       'api::page.page': ApiPagePage;
