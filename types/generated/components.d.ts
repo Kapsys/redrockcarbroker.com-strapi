@@ -338,6 +338,20 @@ export interface SectionProductSection extends Schema.Component {
   };
 }
 
+export interface SectionPromoSection extends Schema.Component {
+  collectionName: 'components_section_promo_sections';
+  info: {
+    displayName: 'Promo Section';
+    icon: 'monitor';
+  };
+  attributes: {
+    backgroundImage: Attribute.Media;
+    title: Attribute.String;
+    description: Attribute.Text;
+    button: Attribute.Component<'element.button'>;
+  };
+}
+
 export interface SectionStatisticsSection extends Schema.Component {
   collectionName: 'components_section_statistics_sections';
   info: {
@@ -444,6 +458,7 @@ declare module '@strapi/types' {
       'section.header': SectionHeader;
       'section.hero-section': SectionHeroSection;
       'section.product-section': SectionProductSection;
+      'section.promo-section': SectionPromoSection;
       'section.statistics-section': SectionStatisticsSection;
       'section.testimonials-section': SectionTestimonialsSection;
       'shared.meta-social': SharedMetaSocial;
