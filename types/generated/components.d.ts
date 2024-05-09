@@ -255,13 +255,7 @@ export interface SectionContactSection extends Schema.Component {
   attributes: {
     textBlock: Attribute.Component<'element.text-block'>;
     contactItems: Attribute.Component<'element.contact-items', true>;
-    oembedMap: Attribute.RichText &
-      Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'toolbarBalloon';
-        }
-      >;
+    oembedMap: Attribute.Text;
   };
 }
 

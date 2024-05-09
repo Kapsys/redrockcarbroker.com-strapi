@@ -19,11 +19,7 @@
       "component": "element.contact-items"
     },
     "oembedMap": {
-      "type": "customField",
-      "options": {
-        "preset": "toolbarBalloon"
-      },
-      "customField": "plugin::ckeditor5.CKEditor"
+      "type": "text"
     }
   }
 }

@@ -922,6 +922,7 @@ export interface ApiContactBlockContactBlock extends Schema.SingleType {
     singularName: 'contact-block';
     pluralName: 'contact-blocks';
     displayName: 'Contact Block';
+    description: '';
   };
   options: {
     draftAndPublish: true;
