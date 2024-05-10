@@ -20,6 +20,11 @@
     },
     "oembedMap": {
       "type": "text"
+    },
+    "requests": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.requests"
     }
   }
 }

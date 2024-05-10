@@ -193,6 +193,17 @@ export interface ElementProductInfos extends Schema.Component {
   };
 }
 
+export interface ElementRequests extends Schema.Component {
+  collectionName: 'components_element_requests';
+  info: {
+    displayName: 'Requests';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    request: Attribute.String;
+  };
+}
+
 export interface ElementSocials extends Schema.Component {
   collectionName: 'components_element_socials';
   info: {
@@ -256,6 +267,7 @@ export interface SectionContactSection extends Schema.Component {
     textBlock: Attribute.Component<'element.text-block'>;
     contactItems: Attribute.Component<'element.contact-items', true>;
     oembedMap: Attribute.Text;
+    requests: Attribute.Component<'element.requests', true>;
   };
 }
 
@@ -444,6 +456,7 @@ declare module '@strapi/types' {
       'element.post-gallery': ElementPostGallery;
       'element.product-description': ElementProductDescription;
       'element.product-infos': ElementProductInfos;
+      'element.requests': ElementRequests;
       'element.socials': ElementSocials;
       'element.specifications': ElementSpecifications;
       'element.testimonials': ElementTestimonials;

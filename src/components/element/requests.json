@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_element_requests",
+  "info": {
+    "displayName": "Requests",
+    "icon": "chartBubble"
+  },
+  "options": {},
+  "attributes": {
+    "request": {
+      "type": "string"
+    }
+  }
+}
