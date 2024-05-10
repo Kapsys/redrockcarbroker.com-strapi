@@ -198,9 +198,10 @@ export interface ElementRequests extends Schema.Component {
   info: {
     displayName: 'Requests';
     icon: 'chartBubble';
+    description: '';
   };
   attributes: {
-    request: Attribute.String;
+    title: Attribute.String;
   };
 }
 

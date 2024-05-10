@@ -2,11 +2,12 @@
   "collectionName": "components_element_requests",
   "info": {
     "displayName": "Requests",
-    "icon": "chartBubble"
+    "icon": "chartBubble",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "request": {
+    "title": {
       "type": "string"
     }
   }
