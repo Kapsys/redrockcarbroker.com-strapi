@@ -4,7 +4,8 @@
   "info": {
     "singularName": "form",
     "pluralName": "forms",
-    "displayName": "Form"
+    "displayName": "Form",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,23 +21,14 @@
     "phone": {
       "type": "string"
     },
-    "request": {
-      "type": "enumeration",
-      "enum": [
-        "Select a request type"
-      ],
-      "default": "Select a request type"
-    },
     "message": {
       "type": "text"
     },
-    "button": {
-      "type": "component",
-      "repeatable": false,
-      "component": "element.button"
-    },
     "recaptchaId": {
       "type": "string"
+    },
+    "request": {
+      "type": "text"
     }
   }
 }

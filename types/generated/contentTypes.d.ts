@@ -969,6 +969,7 @@ export interface ApiFormForm extends Schema.CollectionType {
     singularName: 'form';
     pluralName: 'forms';
     displayName: 'Form';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -977,11 +978,9 @@ export interface ApiFormForm extends Schema.CollectionType {
     name: Attribute.String;
     email: Attribute.Email;
     phone: Attribute.String;
-    request: Attribute.Enumeration<['Select a request type']> &
-      Attribute.DefaultTo<'Select a request type'>;
     message: Attribute.Text;
-    button: Attribute.Component<'element.button'>;
     recaptchaId: Attribute.String;
+    request: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
