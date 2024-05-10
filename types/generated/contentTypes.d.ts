@@ -1072,6 +1072,7 @@ export interface ApiPostPost extends Schema.CollectionType {
     carDescription: Attribute.Component<'element.product-description'>;
     seo: Attribute.Component<'shared.seo'>;
     carInfos: Attribute.Component<'element.product-infos', true>;
+    featuredImage: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
