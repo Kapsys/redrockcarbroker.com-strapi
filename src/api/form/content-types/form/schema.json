@@ -25,7 +25,7 @@
       "type": "text"
     },
     "recaptchaId": {
-      "type": "string"
+      "type": "text"
     },
     "request": {
       "type": "text"

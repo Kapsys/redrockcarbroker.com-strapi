@@ -979,7 +979,7 @@ export interface ApiFormForm extends Schema.CollectionType {
     email: Attribute.Email;
     phone: Attribute.String;
     message: Attribute.Text;
-    recaptchaId: Attribute.String;
+    recaptchaId: Attribute.Text;
     request: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
