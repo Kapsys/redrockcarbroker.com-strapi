@@ -69,6 +69,12 @@
     },
     "numberOfPosts": {
       "type": "string"
+    },
+    "carSpecificationsHomepage": {
+      "displayName": "Car Specifications Homepage",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.car-specifications-homepage"
     }
   }
 }

@@ -49,6 +49,17 @@ export interface ElementCarParameters extends Schema.Component {
   };
 }
 
+export interface ElementCarSpecificationsHomepage extends Schema.Component {
+  collectionName: 'components_element_car_specifications_homepages';
+  info: {
+    displayName: 'Car Specifications Homepage';
+    icon: 'server';
+  };
+  attributes: {
+    carSpecification: Attribute.String;
+  };
+}
+
 export interface ElementCarSpecifications extends Schema.Component {
   collectionName: 'components_element_car_specifications';
   info: {
@@ -446,6 +457,7 @@ declare module '@strapi/types' {
       'element.button': ElementButton;
       'element.call-to-action': ElementCallToAction;
       'element.car-parameters': ElementCarParameters;
+      'element.car-specifications-homepage': ElementCarSpecificationsHomepage;
       'element.car-specifications': ElementCarSpecifications;
       'element.cards': ElementCards;
       'element.contact-items': ElementContactItems;

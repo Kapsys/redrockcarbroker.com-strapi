@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_element_car_specifications_homepages",
+  "info": {
+    "displayName": "Car Specifications Homepage",
+    "icon": "server"
+  },
+  "options": {},
+  "attributes": {
+    "carSpecification": {
+      "type": "string"
+    }
+  }
+}
