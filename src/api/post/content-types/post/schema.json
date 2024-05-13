@@ -72,6 +72,9 @@
       "type": "component",
       "repeatable": true,
       "component": "element.car-specifications-homepage"
+    },
+    "isSold": {
+      "type": "boolean"
     }
   }
 }
