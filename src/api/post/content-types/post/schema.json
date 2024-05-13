@@ -52,14 +52,23 @@
       "component": "element.product-infos"
     },
     "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "button": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.button"
+    },
+    "numberOfPosts": {
+      "type": "string"
     }
   }
 }

@@ -1072,6 +1072,8 @@ export interface ApiPostPost extends Schema.CollectionType {
     seo: Attribute.Component<'shared.seo'>;
     carInfos: Attribute.Component<'element.product-infos', true>;
     featuredImage: Attribute.Media;
+    button: Attribute.Component<'element.button', true>;
+    numberOfPosts: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
