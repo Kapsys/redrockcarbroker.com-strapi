@@ -354,7 +354,7 @@ export interface SectionProductSection extends Schema.Component {
   attributes: {
     textBlock: Attribute.Component<'element.text-block'>;
     button: Attribute.Component<'element.button', true>;
-    numberOfPosts: Attribute.String;
+    isSold: Attribute.Boolean;
   };
 }
 

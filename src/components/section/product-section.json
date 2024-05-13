@@ -17,8 +17,8 @@
       "repeatable": true,
       "component": "element.button"
     },
-    "numberOfPosts": {
-      "type": "string"
+    "isSold": {
+      "type": "boolean"
     }
   }
 }
