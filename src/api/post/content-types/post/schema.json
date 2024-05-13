@@ -67,9 +67,6 @@
       "repeatable": true,
       "component": "element.button"
     },
-    "numberOfPosts": {
-      "type": "string"
-    },
     "carSpecificationsHomepage": {
       "displayName": "Car Specifications Homepage",
       "type": "component",
