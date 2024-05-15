@@ -268,6 +268,36 @@ export interface ElementTextBlock extends Schema.Component {
   };
 }
 
+export interface ElementValues extends Schema.Component {
+  collectionName: 'components_element_values';
+  info: {
+    displayName: 'Values';
+    icon: 'database';
+    description: '';
+  };
+  attributes: {
+    icon: Attribute.Media;
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface SectionAboutUsSection extends Schema.Component {
+  collectionName: 'components_section_about_us_sections';
+  info: {
+    displayName: 'About Us Section';
+    icon: 'discuss';
+    description: '';
+  };
+  attributes: {
+    description: Attribute.Text;
+    socials: Attribute.Component<'element.socials', true>;
+    image: Attribute.Media;
+    title: Attribute.String;
+    content: Attribute.Text;
+  };
+}
+
 export interface SectionContactSection extends Schema.Component {
   collectionName: 'components_section_contact_sections';
   info: {
@@ -341,6 +371,21 @@ export interface SectionHeroSection extends Schema.Component {
     description: Attribute.Text;
     backgroundImage: Attribute.Media;
     button: Attribute.Component<'element.button', true>;
+  };
+}
+
+export interface SectionOurMissionSection extends Schema.Component {
+  collectionName: 'components_section_our_mission_sections';
+  info: {
+    displayName: 'Our Mission Section';
+    icon: 'key';
+    description: '';
+  };
+  attributes: {
+    backgroundImage: Attribute.Media;
+    title: Attribute.String;
+    description: Attribute.Text;
+    values: Attribute.Component<'element.values', true>;
   };
 }
 
@@ -475,11 +520,14 @@ declare module '@strapi/types' {
       'element.specifications': ElementSpecifications;
       'element.testimonials': ElementTestimonials;
       'element.text-block': ElementTextBlock;
+      'element.values': ElementValues;
+      'section.about-us-section': SectionAboutUsSection;
       'section.contact-section': SectionContactSection;
       'section.faq-section': SectionFaqSection;
       'section.footer': SectionFooter;
       'section.header': SectionHeader;
       'section.hero-section': SectionHeroSection;
+      'section.our-mission-section': SectionOurMissionSection;
       'section.product-section': SectionProductSection;
       'section.promo-section': SectionPromoSection;
       'section.statistics-section': SectionStatisticsSection;

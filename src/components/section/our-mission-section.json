@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_section_our_mission_sections",
+  "info": {
+    "displayName": "Our Mission Section",
+    "icon": "key",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "values": {
+      "displayName": "Values",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.values"
+    }
+  }
+}

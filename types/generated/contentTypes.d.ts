@@ -1037,7 +1037,9 @@ export interface ApiPagePage extends Schema.CollectionType {
         'section.contact-section',
         'section.product-section',
         'section.testimonials-section',
-        'section.promo-section'
+        'section.promo-section',
+        'section.about-us-section',
+        'section.our-mission-section'
       ]
     >;
     seo: Attribute.Component<'shared.seo'>;
