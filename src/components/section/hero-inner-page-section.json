@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_section_hero_inner_page_sections",
+  "info": {
+    "displayName": "Hero Inner Page Section",
+    "icon": "rotate"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "socials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.socials"
+    }
+  }
+}
