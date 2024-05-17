@@ -89,6 +89,18 @@ export interface ElementCards extends Schema.Component {
   };
 }
 
+export interface ElementCars extends Schema.Component {
+  collectionName: 'components_element_cars';
+  info: {
+    displayName: 'Cars';
+    icon: 'archive';
+  };
+  attributes: {
+    carType: Attribute.String;
+    numberOfCarsInStock: Attribute.Integer;
+  };
+}
+
 export interface ElementContactItems extends Schema.Component {
   collectionName: 'components_element_contact_items';
   info: {
@@ -102,6 +114,18 @@ export interface ElementContactItems extends Schema.Component {
   };
 }
 
+export interface ElementExternalLinks extends Schema.Component {
+  collectionName: 'components_element_external_links';
+  info: {
+    displayName: 'External Links';
+    icon: 'manyToOne';
+  };
+  attributes: {
+    logo: Attribute.Media;
+    button: Attribute.Component<'element.button'>;
+  };
+}
+
 export interface ElementFaq extends Schema.Component {
   collectionName: 'components_element_faqs';
   info: {
@@ -111,6 +135,20 @@ export interface ElementFaq extends Schema.Component {
   attributes: {
     faqQuestion: Attribute.Text;
     faqAnswer: Attribute.Text;
+  };
+}
+
+export interface ElementFilters extends Schema.Component {
+  collectionName: 'components_element_filters';
+  info: {
+    displayName: 'Filters';
+    icon: 'cast';
+  };
+  attributes: {
+    title: Attribute.String;
+    searchPlaceholder: Attribute.String;
+    cars: Attribute.Component<'element.cars', true>;
+    button: Attribute.Component<'element.button'>;
   };
 }
 
@@ -268,6 +306,29 @@ export interface ElementTextBlock extends Schema.Component {
   };
 }
 
+export interface ElementTransmissionFilters extends Schema.Component {
+  collectionName: 'components_element_transmission_filters';
+  info: {
+    displayName: 'Transmission Filters';
+    icon: 'oneToOne';
+  };
+  attributes: {
+    title: Attribute.String;
+    transmissionTypes: Attribute.Component<'element.transmission-types', true>;
+  };
+}
+
+export interface ElementTransmissionTypes extends Schema.Component {
+  collectionName: 'components_element_transmission_types';
+  info: {
+    displayName: 'Transmission Types';
+    icon: 'oneWay';
+  };
+  attributes: {
+    type: Attribute.String;
+  };
+}
+
 export interface ElementValues extends Schema.Component {
   collectionName: 'components_element_values';
   info: {
@@ -313,6 +374,17 @@ export interface SectionContactSection extends Schema.Component {
   };
 }
 
+export interface SectionExternalLinksSection extends Schema.Component {
+  collectionName: 'components_section_external_links_sections';
+  info: {
+    displayName: 'External Links Section';
+    icon: 'stack';
+  };
+  attributes: {
+    externalLinks: Attribute.Component<'element.external-links', true>;
+  };
+}
+
 export interface SectionFaqSection extends Schema.Component {
   collectionName: 'components_section_faq_sections';
   info: {
@@ -322,6 +394,18 @@ export interface SectionFaqSection extends Schema.Component {
   attributes: {
     textBlock: Attribute.Component<'element.text-block'>;
     faq: Attribute.Component<'element.faq', true>;
+  };
+}
+
+export interface SectionFiltersSection extends Schema.Component {
+  collectionName: 'components_section_filters_sections';
+  info: {
+    displayName: 'Filters Section';
+    icon: 'collapse';
+  };
+  attributes: {
+    filters: Attribute.Component<'element.filters', true>;
+    transmissionFilters: Attribute.Component<'element.transmission-filters', true>;
   };
 }
 
@@ -518,8 +602,11 @@ declare module '@strapi/types' {
       'element.car-specifications-homepage': ElementCarSpecificationsHomepage;
       'element.car-specifications': ElementCarSpecifications;
       'element.cards': ElementCards;
+      'element.cars': ElementCars;
       'element.contact-items': ElementContactItems;
+      'element.external-links': ElementExternalLinks;
       'element.faq': ElementFaq;
+      'element.filters': ElementFilters;
       'element.footer-menu-items': ElementFooterMenuItems;
       'element.header-infos': ElementHeaderInfos;
       'element.infos': ElementInfos;
@@ -532,10 +619,14 @@ declare module '@strapi/types' {
       'element.specifications': ElementSpecifications;
       'element.testimonials': ElementTestimonials;
       'element.text-block': ElementTextBlock;
+      'element.transmission-filters': ElementTransmissionFilters;
+      'element.transmission-types': ElementTransmissionTypes;
       'element.values': ElementValues;
       'section.about-us-section': SectionAboutUsSection;
       'section.contact-section': SectionContactSection;
+      'section.external-links-section': SectionExternalLinksSection;
       'section.faq-section': SectionFaqSection;
+      'section.filters-section': SectionFiltersSection;
       'section.footer': SectionFooter;
       'section.header': SectionHeader;
       'section.hero-inner-page-section': SectionHeroInnerPageSection;

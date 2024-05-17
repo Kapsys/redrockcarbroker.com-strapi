@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_element_external_links",
+  "info": {
+    "displayName": "External Links",
+    "icon": "manyToOne"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.button"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_element_cars",
+  "info": {
+    "displayName": "Cars",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "carType": {
+      "type": "string"
+    },
+    "numberOfCarsInStock": {
+      "type": "integer"
+    }
+  }
+}

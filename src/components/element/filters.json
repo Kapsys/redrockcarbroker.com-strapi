@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_element_filters",
+  "info": {
+    "displayName": "Filters",
+    "icon": "cast"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "searchPlaceholder": {
+      "type": "string"
+    },
+    "cars": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.cars"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.button"
+    }
+  }
+}

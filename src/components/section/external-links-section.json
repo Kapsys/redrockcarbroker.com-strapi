@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_section_external_links_sections",
+  "info": {
+    "displayName": "External Links Section",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "externalLinks": {
+      "displayName": "External Links",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.external-links"
+    }
+  }
+}

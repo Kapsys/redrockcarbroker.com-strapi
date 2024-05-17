@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_element_transmission_types",
+  "info": {
+    "displayName": "Transmission Types",
+    "icon": "oneWay"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_section_filters_sections",
+  "info": {
+    "displayName": "Filters Section",
+    "icon": "collapse"
+  },
+  "options": {},
+  "attributes": {
+    "filters": {
+      "displayName": "Filters",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.filters"
+    },
+    "transmissionFilters": {
+      "displayName": "Transmission Filters",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.transmission-filters"
+    }
+  
+  }
+}

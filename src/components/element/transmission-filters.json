@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_element_transmission_filters",
+  "info": {
+    "displayName": "Transmission Filters",
+    "icon": "oneToOne"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "transmissionTypes": {
+      "displayName": "Transmission Types",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.transmission-types"
+    }
+  }
+}
