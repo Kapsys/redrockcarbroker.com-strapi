@@ -15,9 +15,14 @@
     "transmissionFilters": {
       "displayName": "Transmission Filters",
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "element.transmission-filters"
+    },
+    "colorFilter": {
+      "displayName": "Color Filter",
+      "type": "component",
+      "repeatable": false,
+      "component": "element.color-filter"
     }
-  
   }
 }

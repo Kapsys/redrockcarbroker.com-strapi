@@ -101,6 +101,32 @@ export interface ElementCars extends Schema.Component {
   };
 }
 
+export interface ElementColorFilter extends Schema.Component {
+  collectionName: 'components_element_color_filters';
+  info: {
+    displayName: 'Color Filter';
+    icon: 'write';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    colors: Attribute.Component<'element.colors', true>;
+    button: Attribute.Component<'element.button'>;
+  };
+}
+
+export interface ElementColors extends Schema.Component {
+  collectionName: 'components_element_colors';
+  info: {
+    displayName: 'Colors';
+    icon: 'write';
+    description: '';
+  };
+  attributes: {
+    colorName: Attribute.String & Attribute.CustomField<'plugin::color-picker.color'>;
+  };
+}
+
 export interface ElementContactItems extends Schema.Component {
   collectionName: 'components_element_contact_items';
   info: {
@@ -405,7 +431,8 @@ export interface SectionFiltersSection extends Schema.Component {
   };
   attributes: {
     filters: Attribute.Component<'element.filters', true>;
-    transmissionFilters: Attribute.Component<'element.transmission-filters', true>;
+    transmissionFilters: Attribute.Component<'element.transmission-filters'>;
+    colorFilter: Attribute.Component<'element.color-filter'>;
   };
 }
 
@@ -603,6 +630,8 @@ declare module '@strapi/types' {
       'element.car-specifications': ElementCarSpecifications;
       'element.cards': ElementCards;
       'element.cars': ElementCars;
+      'element.color-filter': ElementColorFilter;
+      'element.colors': ElementColors;
       'element.contact-items': ElementContactItems;
       'element.external-links': ElementExternalLinks;
       'element.faq': ElementFaq;

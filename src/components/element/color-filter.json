@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_element_color_filters",
+  "info": {
+    "displayName": "Color Filter",
+    "icon": "write",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "colors": {
+      "displayName": "Colors",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.colors"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.button"
+    }
+  }
+}
