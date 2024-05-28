@@ -124,6 +124,7 @@ export interface ElementColors extends Schema.Component {
   };
   attributes: {
     colorName: Attribute.String & Attribute.CustomField<'plugin::color-picker.color'>;
+    colorTitle: Attribute.String;
   };
 }
 
