@@ -146,6 +146,7 @@ export interface ElementExternalLinks extends Schema.Component {
   info: {
     displayName: 'External Links';
     icon: 'manyToOne';
+    description: '';
   };
   attributes: {
     logo: Attribute.Media;
@@ -408,6 +409,7 @@ export interface SectionExternalLinksSection extends Schema.Component {
     icon: 'stack';
   };
   attributes: {
+    title: Attribute.String;
     externalLinks: Attribute.Component<'element.external-links', true>;
   };
 }
