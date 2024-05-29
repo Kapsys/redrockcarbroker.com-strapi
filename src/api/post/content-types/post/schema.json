@@ -18,9 +18,6 @@
     "slug": {
       "type": "string"
     },
-    "price": {
-      "type": "string"
-    },
     "carGallery": {
       "type": "component",
       "repeatable": true,
@@ -75,6 +72,9 @@
     },
     "isSold": {
       "type": "boolean"
+    },
+    "price": {
+      "type": "biginteger"
     }
   }
 }

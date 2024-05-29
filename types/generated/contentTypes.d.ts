@@ -1069,7 +1069,6 @@ export interface ApiPostPost extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     slug: Attribute.String;
-    price: Attribute.String;
     carGallery: Attribute.Component<'element.post-gallery', true>;
     carSpecifications: Attribute.Component<'element.car-specifications', true>;
     callToAction: Attribute.Component<'element.call-to-action', true>;
@@ -1080,6 +1079,7 @@ export interface ApiPostPost extends Schema.CollectionType {
     button: Attribute.Component<'element.button', true>;
     carSpecificationsHomepage: Attribute.Component<'element.car-specifications-homepage', true>;
     isSold: Attribute.Boolean;
+    price: Attribute.BigInteger;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
