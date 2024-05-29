@@ -72,6 +72,9 @@
     },
     "isSold": {
       "type": "boolean"
+    },
+    "price": {
+      "type": "integer"
     }
   }
 }
