@@ -1079,7 +1079,6 @@ export interface ApiPostPost extends Schema.CollectionType {
     button: Attribute.Component<'element.button', true>;
     carSpecificationsHomepage: Attribute.Component<'element.car-specifications-homepage', true>;
     isSold: Attribute.Boolean;
-    price: Attribute.BigInteger;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
