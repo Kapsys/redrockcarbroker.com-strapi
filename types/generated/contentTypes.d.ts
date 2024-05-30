@@ -916,6 +916,40 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiCarCar extends Schema.CollectionType {
+  collectionName: 'cars';
+  info: {
+    singularName: 'car';
+    pluralName: 'cars';
+    displayName: 'Car';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    slug: Attribute.String;
+    carGallery: Attribute.Component<'element.post-gallery', true>;
+    carSpecifications: Attribute.Component<'element.car-specifications', true>;
+    callToAction: Attribute.Component<'element.call-to-action', true>;
+    carDescription: Attribute.Component<'element.product-description'>;
+    seo: Attribute.Component<'shared.seo'>;
+    carInfos: Attribute.Component<'element.product-infos', true>;
+    featuredImage: Attribute.Media;
+    button: Attribute.Component<'element.button', true>;
+    carSpecificationsHomepage: Attribute.Component<'element.car-specifications-homepage', true>;
+    isSold: Attribute.Boolean;
+    price: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::car.car', 'oneToOne', 'admin::user'> & Attribute.Private;
+    updatedBy: Attribute.Relation<'api::car.car', 'oneToOne', 'admin::user'> & Attribute.Private;
+    sitemap_exclude: Attribute.Boolean & Attribute.Private & Attribute.DefaultTo<false>;
+  };
+}
+
 export interface ApiContactBlockContactBlock extends Schema.SingleType {
   collectionName: 'contact_blocks';
   info: {
@@ -1055,40 +1089,6 @@ export interface ApiPagePage extends Schema.CollectionType {
   };
 }
 
-export interface ApiPostPost extends Schema.CollectionType {
-  collectionName: 'posts';
-  info: {
-    singularName: 'post';
-    pluralName: 'posts';
-    displayName: 'Post';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    slug: Attribute.String;
-    carGallery: Attribute.Component<'element.post-gallery', true>;
-    carSpecifications: Attribute.Component<'element.car-specifications', true>;
-    callToAction: Attribute.Component<'element.call-to-action', true>;
-    carDescription: Attribute.Component<'element.product-description'>;
-    seo: Attribute.Component<'shared.seo'>;
-    carInfos: Attribute.Component<'element.product-infos', true>;
-    featuredImage: Attribute.Media;
-    button: Attribute.Component<'element.button', true>;
-    carSpecificationsHomepage: Attribute.Component<'element.car-specifications-homepage', true>;
-    isSold: Attribute.Boolean;
-    price: Attribute.Integer;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> & Attribute.Private;
-    updatedBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> & Attribute.Private;
-    sitemap_exclude: Attribute.Boolean & Attribute.Private & Attribute.DefaultTo<false>;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1113,12 +1113,12 @@ declare module '@strapi/types' {
       'plugin::sitemap.sitemap': PluginSitemapSitemap;
       'plugin::sitemap.sitemap-cache': PluginSitemapSitemapCache;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::car.car': ApiCarCar;
       'api::contact-block.contact-block': ApiContactBlockContactBlock;
       'api::faq-block.faq-block': ApiFaqBlockFaqBlock;
       'api::form.form': ApiFormForm;
       'api::global.global': ApiGlobalGlobal;
       'api::page.page': ApiPagePage;
-      'api::post.post': ApiPostPost;
     }
   }
 }

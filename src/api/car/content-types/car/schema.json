@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "posts",
+  "collectionName": "cars",
   "info": {
-    "singularName": "post",
-    "pluralName": "posts",
-    "displayName": "Post",
+    "singularName": "car",
+    "pluralName": "cars",
+    "displayName": "Car",
     "description": ""
   },
   "options": {
