@@ -75,6 +75,9 @@
     },
     "price": {
       "type": "integer"
+    },
+    "mileage": {
+      "type": "integer"
     }
   }
 }

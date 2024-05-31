@@ -941,6 +941,7 @@ export interface ApiCarCar extends Schema.CollectionType {
     carSpecificationsHomepage: Attribute.Component<'element.car-specifications-homepage', true>;
     isSold: Attribute.Boolean;
     price: Attribute.Integer;
+    mileage: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
