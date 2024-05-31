@@ -28,11 +28,6 @@
       "repeatable": true,
       "component": "element.car-specifications"
     },
-    "callToAction": {
-      "type": "component",
-      "repeatable": true,
-      "component": "element.call-to-action"
-    },
     "carDescription": {
       "type": "component",
       "repeatable": false,

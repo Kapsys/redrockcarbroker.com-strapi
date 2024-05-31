@@ -932,7 +932,6 @@ export interface ApiCarCar extends Schema.CollectionType {
     slug: Attribute.String;
     carGallery: Attribute.Component<'element.post-gallery', true>;
     carSpecifications: Attribute.Component<'element.car-specifications', true>;
-    callToAction: Attribute.Component<'element.call-to-action', true>;
     carDescription: Attribute.Component<'element.product-description'>;
     seo: Attribute.Component<'shared.seo'>;
     carInfos: Attribute.Component<'element.product-infos', true>;
