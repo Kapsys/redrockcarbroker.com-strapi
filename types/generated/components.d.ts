@@ -8,7 +8,7 @@ export interface ElementAdvantagesSection extends Schema.Component {
     description: '';
   };
   attributes: {
-    icon: Attribute.Media;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     description: Attribute.Text;
   };
 }
@@ -32,7 +32,7 @@ export interface ElementCallToAction extends Schema.Component {
     icon: 'pinMap';
   };
   attributes: {
-    icon: Attribute.Media;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     name: Attribute.String;
     nameLink: Attribute.String;
   };
@@ -81,7 +81,7 @@ export interface ElementCards extends Schema.Component {
     description: '';
   };
   attributes: {
-    featuredImage: Attribute.Media;
+    featuredImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Attribute.String;
     carParameters: Attribute.Component<'element.car-parameters', true>;
     price: Attribute.String;
@@ -135,9 +135,24 @@ export interface ElementContactItems extends Schema.Component {
     icon: 'gate';
   };
   attributes: {
-    icon: Attribute.Media;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     ItemTitle: Attribute.String;
     itemContent: Attribute.Text;
+  };
+}
+
+export interface ElementEmptyState extends Schema.Component {
+  collectionName: 'components_element_empty_states';
+  info: {
+    displayName: 'Empty State';
+    icon: 'stack';
+    description: '';
+  };
+  attributes: {
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+    button: Attribute.Component<'element.button'>;
   };
 }
 
@@ -149,7 +164,7 @@ export interface ElementExternalLinks extends Schema.Component {
     description: '';
   };
   attributes: {
-    logo: Attribute.Media;
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     button: Attribute.Component<'element.button'>;
   };
 }
@@ -200,7 +215,7 @@ export interface ElementHeaderInfos extends Schema.Component {
     description: '';
   };
   attributes: {
-    icon: Attribute.Media;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     addressInfos: Attribute.String;
     link: Attribute.Text;
   };
@@ -239,7 +254,7 @@ export interface ElementPostGallery extends Schema.Component {
     description: '';
   };
   attributes: {
-    postimage: Attribute.Media;
+    postimage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -289,7 +304,7 @@ export interface ElementSocials extends Schema.Component {
     icon: 'thumbUp';
   };
   attributes: {
-    socialIcon: Attribute.Media;
+    socialIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     socialUrl: Attribute.String;
   };
 }
@@ -302,7 +317,7 @@ export interface ElementSpecifications extends Schema.Component {
     description: '';
   };
   attributes: {
-    icon: Attribute.Media;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     parameter: Attribute.String;
     value: Attribute.String;
   };
@@ -316,7 +331,7 @@ export interface ElementTestimonials extends Schema.Component {
     description: '';
   };
   attributes: {
-    photo: Attribute.Media;
+    photo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     description: Attribute.Text;
     fullName: Attribute.String;
   };
@@ -365,7 +380,7 @@ export interface ElementValues extends Schema.Component {
     description: '';
   };
   attributes: {
-    icon: Attribute.Media;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Attribute.String;
     description: Attribute.Text;
   };
@@ -381,7 +396,7 @@ export interface SectionAboutUsSection extends Schema.Component {
   attributes: {
     description: Attribute.Text;
     socials: Attribute.Component<'element.socials', true>;
-    image: Attribute.Media;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Attribute.String;
     content: Attribute.Text;
   };
@@ -436,6 +451,7 @@ export interface SectionFiltersSection extends Schema.Component {
     filters: Attribute.Component<'element.filters', true>;
     transmissionFilters: Attribute.Component<'element.transmission-filters'>;
     colorFilter: Attribute.Component<'element.color-filter'>;
+    emptyState: Attribute.Component<'element.empty-state'>;
   };
 }
 
@@ -447,12 +463,12 @@ export interface SectionFooter extends Schema.Component {
     description: '';
   };
   attributes: {
-    footerLogo: Attribute.Media;
+    footerLogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     socials: Attribute.Component<'element.socials', true>;
     menuItems: Attribute.Component<'element.menu-items', true>;
     footerMenuItems: Attribute.Component<'element.footer-menu-items', true>;
     logoText: Attribute.String;
-    kapsysLogo: Attribute.Media;
+    kapsysLogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     kapsysLogoLink: Attribute.String;
     button: Attribute.Component<'element.button'>;
   };
@@ -467,7 +483,7 @@ export interface SectionHeader extends Schema.Component {
   };
   attributes: {
     headerInfos: Attribute.Component<'element.header-infos', true>;
-    headerlogo: Attribute.Media;
+    headerlogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     menuItems: Attribute.Component<'element.menu-items', true>;
     button: Attribute.Component<'element.button'>;
   };
@@ -495,7 +511,7 @@ export interface SectionHeroSection extends Schema.Component {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    backgroundImage: Attribute.Media;
+    backgroundImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     button: Attribute.Component<'element.button', true>;
   };
 }
@@ -508,7 +524,7 @@ export interface SectionOurMissionSection extends Schema.Component {
     description: '';
   };
   attributes: {
-    backgroundImage: Attribute.Media;
+    backgroundImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Attribute.String;
     description: Attribute.Text;
     values: Attribute.Component<'element.values', true>;
@@ -537,7 +553,7 @@ export interface SectionPromoSection extends Schema.Component {
     description: '';
   };
   attributes: {
-    backgroundImage: Attribute.Media;
+    backgroundImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Attribute.String;
     description: Attribute.Text;
     button: Attribute.Component<'element.button', true>;
@@ -565,7 +581,7 @@ export interface SectionTestimonialsSection extends Schema.Component {
     description: '';
   };
   attributes: {
-    backgroundImage: Attribute.Media;
+    backgroundImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Attribute.String;
     description: Attribute.Text;
     testimonials: Attribute.Component<'element.testimonials', true>;
@@ -590,7 +606,7 @@ export interface SharedMetaSocial extends Schema.Component {
       Attribute.SetMinMaxLength<{
         maxLength: 65;
       }>;
-    image: Attribute.Media;
+    image: Attribute.Media<'images' | 'files' | 'videos'>;
   };
 }
 
@@ -612,7 +628,7 @@ export interface SharedSeo extends Schema.Component {
         minLength: 50;
         maxLength: 250;
       }>;
-    metaImage: Attribute.Media & Attribute.Required;
+    metaImage: Attribute.Media<'images' | 'files' | 'videos'> & Attribute.Required;
     metaSocial: Attribute.Component<'shared.meta-social', true>;
     keywords: Attribute.Text;
     metaRobots: Attribute.String;
@@ -636,6 +652,7 @@ declare module '@strapi/types' {
       'element.color-filter': ElementColorFilter;
       'element.colors': ElementColors;
       'element.contact-items': ElementContactItems;
+      'element.empty-state': ElementEmptyState;
       'element.external-links': ElementExternalLinks;
       'element.faq': ElementFaq;
       'element.filters': ElementFilters;

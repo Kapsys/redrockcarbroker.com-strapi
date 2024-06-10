@@ -935,7 +935,7 @@ export interface ApiCarCar extends Schema.CollectionType {
     carDescription: Attribute.Component<'element.product-description'>;
     seo: Attribute.Component<'shared.seo'>;
     carInfos: Attribute.Component<'element.product-infos', true>;
-    featuredImage: Attribute.Media;
+    featuredImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     button: Attribute.Component<'element.button', true>;
     carSpecificationsHomepage: Attribute.Component<'element.car-specifications-homepage', true>;
     isSold: Attribute.Boolean;

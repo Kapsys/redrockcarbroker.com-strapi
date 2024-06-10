@@ -23,6 +23,12 @@
       "type": "component",
       "repeatable": false,
       "component": "element.color-filter"
+    },
+    "emptyState": {
+      "displayName": "Empty State",
+      "type": "component",
+      "repeatable": false,
+      "component": "element.empty-state"
     }
   }
 }
